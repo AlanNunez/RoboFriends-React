@@ -4,18 +4,18 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import "tachyons";
 import App from "./containers/App";
-import { searchRobots } from "./reducer";
+import { searchRobots } from "./reducers";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 const store = createStore(searchRobots);
 
 ReactDOM.render(
-  // <Provider store={store}>
+  <Provider store={store}>
     <div>
-      <App store={store} />
-    </div>,
-  // {/* </Provider>, */}
+      <App />
+    </div>
+  </Provider>,
   document.getElementById("root")
 );
 
